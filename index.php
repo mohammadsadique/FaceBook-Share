@@ -4,14 +4,14 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=231494321392029';
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=FB-APP-ID';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
 
 function fb_share(dynamic_link,dynamic_title){
 	//alert(dynamic_title);
-	var  app_id = '231494321392029';
+	var  app_id = 'FB-APP-ID';
 	var pageURL = "http://www.facebook.com/dialog/feed?app_id="+ app_id + "&link=" + dynamic_link;
 	var w = 600;
 	var h = 400;
@@ -45,7 +45,7 @@ function fb_share(dynamic_link,dynamic_title){
 					<td>
 					    <?php
 							$id = $row["id"];
-							$url = "http://rb.celisoftware.com/fb_share/share.php?id=$id";
+							$url = "http://xyz.com/share.php?id=$id";
 							$data = $row["user_id"];
 						?>
 						<a href="javascript:void(0)" onclick="fb_share('<?php echo $url; ?>','<?php echo $data ?>')" class="fbBtm">
